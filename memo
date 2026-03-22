@@ -1,0 +1,8 @@
+AWS 三层架构高可用 Web 应用部署
+
+• 设计并手动搭建了完整的 3-Tier 架构（Web/App/DB），VPC 跨 2 个可用区实现高可用
+• 配置 ALB 实现流量分发，App 层 EC2 部署在私有子网，仅允许 ALB 访问
+• RDS MySQL 部署在私有子网，配置 Multi-AZ 实现数据库高可用
+• 使用安全组实现网络隔离，通过引用安全组 ID 实现最小权限原则
+• 编写 Terraform 代码将整个架构 IaC 化，实现一键部署和销毁
+• 验证了完整的数据流向：Internet → ALB → App EC2 → RDS
