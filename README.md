@@ -15,7 +15,7 @@ app-az2	us-east-1b	10.0.12.0/24	私有	应用层 EC2
 db-az1	us-east-1a	10.0.21.0/24	私有	数据库层 RDS
 db-az2	us-east-1b	10.0.22.0/24	私有	数据库层 RDS
 
-![子网列表](screenshots/01-subnets.png)
+![子网列表](creenshots/01-subnets.png)
 
 第 2 步：创建网关和路由表
 
@@ -23,7 +23,7 @@ db-az2	us-east-1b	10.0.22.0/24	私有	数据库层 RDS
 创建 NAT Gateway，关联私有子网
 配置路由表
 
-![公有路由表](screenshots/02-public-route-table.png)
+![公有路由表](creenshots/02-public-route-table.png)
 
 第 3 步：创建安全组
 
