@@ -15,7 +15,7 @@ app-az2	us-east-1b	10.0.12.0/24	私有	应用层 EC2
 db-az1	us-east-1a	10.0.21.0/24	私有	数据库层 RDS
 db-az2	us-east-1b	10.0.22.0/24	私有	数据库层 RDS
 
-![子网列表](creenshots/01-subnets.png)
+![子网列表](creenshots/01-vpc-subnets.png)
 
 第 2 步：创建网关和路由表
 
