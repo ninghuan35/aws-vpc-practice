@@ -38,3 +38,16 @@ MySQL，db.t2.micro，私有子网
 确认 App 层能访问外网（通过 NAT 更新软件）
 确认数据库只能被 App 层访问
 
+
+Internet
+   │
+   ▼
+[ALB] ─────────────── 公有子网 (AZ1 + AZ2)
+   │
+   ▼
+[EC2 App Servers] ─── 私有子网-应用层 (Auto Scaling)
+   │
+   ▼
+[RDS Primary + Standby] ─ 私有子网-数据层 (Multi-AZ)
+
+
