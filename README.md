@@ -1,20 +1,29 @@
 # aws-vpc-practice
 三层架构（Web层 + App层 + 数据层）
 
-
 练习步骤规划
 
 第 1 步：创建 VPC 和子网
 
 创建 VPC（10.0.0.0/16）
-创建 1 个公有子网（10.0.1.0/24）
-创建 2 个私有子网（10.0.2.0/24，10.0.3.0/24）
+
+子网名称	可用区	CIDR	类型	用途
+web-az1	us-east-1a	10.0.1.0/24	公有	Web层（ALB）
+web-az2	us-east-1b	10.0.2.0/24	公有	Web层（ALB）
+app-az1	us-east-1a	10.0.11.0/24	私有	应用层 EC2
+app-az2	us-east-1b	10.0.12.0/24	私有	应用层 EC2
+db-az1	us-east-1a	10.0.21.0/24	私有	数据库层 RDS
+db-az2	us-east-1b	10.0.22.0/24	私有	数据库层 RDS
+
+![子网列表](screenshots/01-subnets.png)
 
 第 2 步：创建网关和路由表
 
 创建 Internet Gateway，关联公有子网
 创建 NAT Gateway，关联私有子网
 配置路由表
+
+![公有路由表](screenshots/02-public-route-table.png)
 
 第 3 步：创建安全组
 
