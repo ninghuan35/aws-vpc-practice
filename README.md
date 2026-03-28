@@ -1,7 +1,7 @@
 # aws-vpc-practice
 三层架构（Web层 + App层 + 数据层）
 
-练习步骤规划
+步骤规划
 
 第 1 步：创建 VPC 和子网
 
@@ -14,13 +14,13 @@ app-az1	us-east-1a	10.0.11.0/24	私有	应用层 EC2
 app-az2	us-east-1b	10.0.12.0/24	私有	应用层 EC2
 db-az1	us-east-1a	10.0.21.0/24	私有	数据库层 RDS
 db-az2	us-east-1b	10.0.22.0/24	私有	数据库层 RDS
+![子网列表](creenshots/01-vpc-subnets.png)
 
 第 2 步：创建网关和路由表
 
 创建 Internet Gateway，关联公有子网
 创建 NAT Gateway，关联私有子网
 配置路由表
-![子网列表](creenshots/01-vpc-subnets.png)
 ![公有路由表](creenshots/02-public-route-table.png)
 
 第 3 步：创建安全组
@@ -44,9 +44,6 @@ MySQL，db.t2.micro，私有子网
 从互联网访问 Web 层（能打开 nginx 页面）
 确认 App 层能访问外网（通过 NAT 更新软件）
 确认数据库只能被 App 层访问
-
-
-<img width="629" height="312" alt="image" src="https://github.com/user-attachments/assets/2aa3923d-41f3-4b2d-b627-d6022009a043" />
 
 
 
